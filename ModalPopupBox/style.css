@@ -1,0 +1,106 @@
+/*============= Variáveis ==============*/
+html {
+  --color-background-page: rgb(27, 27, 37);
+  --color-background: rgb(233, 241, 241) ;
+
+
+}
+
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+
+  background-color: var(--color-background-page);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.btnCadastrar {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  font-size: 24px;
+
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0px 0px 30px rgba(102, 231, 253, .7);
+  background-color: rgb(141, 236, 253);
+
+  cursor: pointer;
+  transition: .3s;
+  overflow: hidden;
+}
+
+.btnCadastrar:hover {
+  transform: scale(1.1);
+
+  /*background-color: rgb(155, 86, 219);
+  color: #fff;*/
+  
+}
+
+/*.btnCadastrar:hover::before {
+  content: 'Cadastrar';
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  background-color: rgb(155, 86, 219);
+  top: 0;
+  left: 0;
+  transition: 1s;
+}*/
+
+.popupBox {
+
+  position: relative;
+  display: block;
+  text-align: center;
+
+  width: 350px;
+  height: 450px;
+
+  padding: 20px 50px;
+
+  background-color: var(--color-background);
+
+}
+
+.iconClose {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+img {
+
+}
+
+h1 {
+  margin: 0;
+}
+
+.inputEmail {
+  width: 100%;
+  height: 50px;
+}
+.signUp {
+  width: 150px;
+  height: 50px;
+
+  font-size: 20px;
+
+  border: none;
+  background-color: rgb(23, 128, 197);
+  color: var(--color-background);
+}
