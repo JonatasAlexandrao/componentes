@@ -62,45 +62,71 @@ body {
 }*/
 
 .popupBox {
-
   position: relative;
   display: block;
   text-align: center;
 
-  width: 350px;
-  height: 450px;
+  width: 400px;
+  height: 500px;
 
   padding: 20px 50px;
-
   background-color: var(--color-background);
-
 }
 
 .iconClose {
   position: absolute;
   right: 20px;
   top: 20px;
+  width: 18px;
+  height: 18px;
+
+  cursor: pointer;
+  transition: .3s;
+}
+.iconClose > path { fill: rgb(137, 137, 137); }
+.iconClose:hover { transform: scale(1.3); }
+
+.iconEmail {
+  width: 70px;
+  height: 70px;
+
+  margin: 40px 0 10px 0;
+}
+.iconEmail path {
+  fill: rgb(23, 128, 197);
 }
 
-img {
-
-}
-
-h1 {
-  margin: 0;
-}
+h1 { margin: 0; font-size: 22px; }
 
 .inputEmail {
   width: 100%;
   height: 50px;
+
+  background-color: transparent;
+  border-style: none;
+  border: 1px rgb(168, 168, 168) solid;
+
+  padding-left: 15px;
+  font-size: 18px;
+
 }
 .signUp {
   width: 150px;
   height: 50px;
 
   font-size: 20px;
+  margin-top: 20px;
 
   border: none;
+  border-radius: 3px;
   background-color: rgb(23, 128, 197);
   color: var(--color-background);
+
+  transition: .3s;
+}
+
+.signUp:hover {
+  background-color: rgb(40, 154, 230);
+  transform: scale(1.05);
+  
 }
