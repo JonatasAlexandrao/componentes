@@ -63,7 +63,7 @@ body {
 
 .popupBox {
   position: relative;
-  display: block;
+  display: none;
   text-align: center;
 
   width: 400px;
@@ -92,9 +92,7 @@ body {
 
   margin: 40px 0 10px 0;
 }
-.iconEmail path {
-  fill: rgb(23, 128, 197);
-}
+.iconEmail path { fill: rgb(23, 128, 197); }
 
 h1 { margin: 0; font-size: 22px; }
 
@@ -127,6 +125,5 @@ h1 { margin: 0; font-size: 22px; }
 
 .signUp:hover {
   background-color: rgb(40, 154, 230);
-  transform: scale(1.05);
-  
+  transform: scale(1.05); 
 }
