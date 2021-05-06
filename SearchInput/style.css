@@ -1,0 +1,67 @@
+/*============= Variáveis ==============*/
+html {
+  --color-background-page: rgb(36, 36, 70);
+  --color-background: rgb(220, 245, 210) ;
+  --color-black: rgb(29, 30, 31) ;
+}
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+
+  background-color: var(--color-background-page);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.btnClose {
+  display: inline-block;
+  background-color: var(--color-background);
+  width: 40px;
+  height: 40px;
+}
+
+svg > path {
+  fill: var(--color-black);
+}
+
+.btnSearch {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background-color: var(--color-background);
+}
+.btnClose {
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  background-color: var(--color-background);
+}
+.btnClose:hover > svg{
+  transform: scale(1.5);
+}
+
+input {
+  width: 240px;
+  height: 40px;
+  background-color: var(--color-background);
+  border-style: none;
+
+  font-size: 20px;
+}
