@@ -9,7 +9,6 @@ html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
-  
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -30,38 +29,35 @@ body {
   align-content: center;
 }
 
-.btnClose {
-  display: inline-block;
+.btnSearch, .btnClose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 60px;
   background-color: var(--color-background);
-  width: 40px;
-  height: 40px;
 }
 
-svg > path {
-  fill: var(--color-black);
-}
+.btnSearch { border-radius: 20px 0 0 20px; }
+.btnSearch > svg { width: 25px; height: 25px; }
+.btnSearch > svg > path { fill: rgb(3, 110, 211); }
+.btnSearch:hover > svg { transform: scale(1.1); cursor: pointer; }
 
-.btnSearch {
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  background-color: var(--color-background);
-}
-.btnClose {
-  width: 40px;
-  height: 40px;
-  padding: 12px;
-  background-color: var(--color-background);
-}
-.btnClose:hover > svg{
-  transform: scale(1.5);
-}
+.btnClose { border-radius: 0 20px 20px 0; }
+.btnClose > svg { width: 12px; height: 12px; }
+.btnClose > svg > path { fill: rgb(114, 113, 113); }
+.btnClose:hover > svg { transform: scale(1.2); cursor: pointer; }
+.btnClose:hover > svg > path { fill: brown; }
 
 input {
-  width: 240px;
-  height: 40px;
+  width: 280px;
+  height: 60px;
+  padding: 10px;
+
   background-color: var(--color-background);
   border-style: none;
 
-  font-size: 20px;
+  font-size: 22px;
+  outline: none;
 }
