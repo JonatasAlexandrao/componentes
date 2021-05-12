@@ -1,0 +1,45 @@
+/*============= Variáveis ==============*/
+html {
+  --color-background-page: rgb(66, 66, 66);
+  --color-background-container: rgb(22, 2, 2);
+  --color-background: rgb(220, 245, 210) ;
+  --color-white: rgb(241, 241, 241) ;
+}
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  /*width: 100vw;
+  height: 100vh;*/
+  padding-top: 30px;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+
+  background-color: var(--color-background-page);
+  color: var(--color-white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container {
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+  background-color: var(--color-background-container);
+}
+
+img {
+
+  position: absolute;
+  width: 200px;
+  height: 200px;
+
+  bottom: 0;
+  right: 0;
+
+}
