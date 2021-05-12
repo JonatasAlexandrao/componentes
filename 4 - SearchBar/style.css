@@ -29,26 +29,34 @@ body {
   align-content: center;
 }
 
-.btnSearch, .btnClose {
+.btnSearch, .btnClear {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
 
-  width: 50px;
+  width: 60px;
   height: 60px;
   background-color: var(--color-background);
 }
 
-.btnSearch { border-radius: 20px 0 0 20px; }
+.btnSearch { 
+  border-radius:  20px 0 0 20px;
+}
 .btnSearch > svg { width: 25px; height: 25px; }
 .btnSearch > svg > path { fill: rgb(3, 110, 211); }
-.btnSearch:hover > svg { transform: scale(1.1); cursor: pointer; }
+.btnSearch:hover > svg { transform: scale(1.15); cursor: pointer; }
 
-.btnClose { border-radius: 0 20px 20px 0; }
-.btnClose > svg { width: 12px; height: 12px; }
-.btnClose > svg > path { fill: rgb(114, 113, 113); }
-.btnClose:hover > svg { transform: scale(1.2); cursor: pointer; }
-.btnClose:hover > svg > path { fill: brown; }
+.btnClear { border-radius: 0 20px 20px 0; transition: 1s;}
+.btnClear > svg { 
+  width: 12px; 
+  height: 12px; 
+  color: aliceblue;
+  
+}
+.btnClear > svg > path { fill: rgb(114, 113, 113); }
+.btnClear:hover > svg { transform: scale(1.2); cursor: pointer; }
+.btnClear:hover > svg > path { fill: brown; }
 
 input {
   width: 280px;
@@ -60,4 +68,36 @@ input {
 
   font-size: 22px;
   outline: none;
+
+  transition: 1.3s;
+  
+}
+
+input.-minimize {
+  width: 0;
+  padding: 0;
+}
+
+.btnClear.-minimize {
+  position: relative;
+  left: -40px;
+  z-index: -1;
+}
+
+.btnClear > svg.-minimize { opacity: 0; }
+
+.btnSearch > svg.-minimize {
+  position: relative;
+  left: 45%;
+  transform: translateX(-50%);
+}
+
+
+
+
+
+@keyframes flip {
+  to {
+      transform: rotate(180deg);
+  }
 }
