@@ -17,7 +17,7 @@ body {
   padding-top: 3rem;
   margin: 0;
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 
   background-color: var(--color-background-page);
   color: var(--color-white);
@@ -31,7 +31,9 @@ body {
 .container {
   position: relative;
   width: 80vw;
-  height: 80vh;
+  max-width: 70rem;
+  height: 50rem;
+  
   padding: 2rem 4rem;
   background-color: var(--color-background-container);
   border-radius: .5rem;
@@ -49,7 +51,7 @@ body {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   color: rgb(223, 69, 176);
 
@@ -97,7 +99,7 @@ body {
 
 .content .art {
   position: absolute;
-  width: 17rem;
+  width: 23rem;
   opacity: .9;
 
   bottom: 2rem;
@@ -108,8 +110,10 @@ body {
   animation-delay: 2s;
 }
 
+.info { max-width: 25rem; }
+
 .info h1 { 
-  font-size: 3.5rem;
+  font-size: 4.5rem;
 
   opacity: 0;
   animation: slide_left .8s linear forwards;
@@ -120,10 +124,11 @@ body {
   opacity: 0;
   animation: slide_right .8s linear forwards;
   animation-delay: 1.2s;
+  text-align: justify;
 }
 
 .info > .readMore {
-  font-size: 1rem;
+  font-size: 1.4rem;
 
   border: none;
   padding: .8rem 2rem;
@@ -157,7 +162,7 @@ footer .socialMedia {
   opacity: .6;
   width: 2.5rem;
   height: 2.5rem;
-  margin: 0 1rem 1rem 0;
+  margin: 0 1rem 3rem 0;
 
   transition: .5s;
 
@@ -167,22 +172,41 @@ footer .socialMedia {
   animation-delay: calc(2s + (0.2s * var(--i)));
 }
 
+footer .face {
+  width: 3rem;
+  height: 3rem;
+}
+
 footer .instagram {
-  width: 2.1rem;
-  height: 2.1rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 footer .twitter {
-  width: 2.7rem;
-  height: 2.7rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 footer img:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.4);
   opacity: 1;
 }
 
+
+/* MEDIA */
+
+
+@media (max-width: 650px) {
+  .container {
+    /*background-color: blue;*/
+  }
+  .info { max-width: 22rem; }
+}
+
+
+
+/* KEYFRAMES */
 
 
 @keyframes slide_top {
