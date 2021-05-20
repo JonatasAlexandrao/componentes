@@ -3,7 +3,7 @@ html {
   --color-background-page: rgb(66, 66, 66);
   --color-background-container: rgb(17, 9, 9);
   --color-background: rgb(220, 245, 210) ;
-  --color-white: rgb(241, 241, 241) ;
+  --color-white: rgb(219, 218, 218) ;
 }
 
 html { box-sizing: border-box; }
@@ -52,6 +52,8 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: rgb(223, 69, 176);
+
+  animation: slide_right .8s linear;
   
 }
 
@@ -63,9 +65,15 @@ body {
 .menu li {
   display: inline-block;
   padding: .4rem 1rem;
+  font-weight: 700;
+
+  opacity: 0;
+  animation: slide_top 0.5s linear forwards;
+  animation-delay: calc(0.2s * var(--i));
+
 
 }
-/*.menu li:last-child { margin-right: 0; }*/
+
 
 .menu li:hover {
   background: rgb(201, 61, 61);
@@ -87,17 +95,32 @@ body {
 
 }
 
-.content img {
+.content .art {
   position: absolute;
   width: 17rem;
-  /*height: 10rem;*/
   opacity: .9;
 
   bottom: 2rem;
   right: 0;
+
+  opacity: 0;
+  animation: fase_in 2s linear forwards;
+  animation-delay: 2s;
 }
 
-.info h1 { font-size: 3.5rem; }
+.info h1 { 
+  font-size: 3.5rem;
+
+  opacity: 0;
+  animation: slide_left .8s linear forwards;
+  animation-delay: .8s;
+}
+
+.info p {
+  opacity: 0;
+  animation: slide_right .8s linear forwards;
+  animation-delay: 1.2s;
+}
 
 .info > .readMore {
   font-size: 1rem;
@@ -111,6 +134,10 @@ body {
 
   cursor: pointer;
   transition: .5s;
+
+  opacity: 0;
+  animation: slide_top .5s linear forwards;
+  animation-delay: 1.6s;
 }
 
 .info > .readMore:hover {
@@ -126,13 +153,18 @@ footer {
   height: 3rem;
   /*background-color: violet;*/
 }
-footer img {
+footer .socialMedia {
   opacity: .6;
   width: 2.5rem;
   height: 2.5rem;
   margin: 0 1rem 1rem 0;
 
   transition: .5s;
+
+  opacity: 0;
+  animation: fase_in .1s linear forwards;
+
+  animation-delay: calc(2s + (0.2s * var(--i)));
 }
 
 footer .instagram {
@@ -149,4 +181,45 @@ footer img:hover {
   cursor: pointer;
   transform: scale(1.2);
   opacity: 1;
+}
+
+
+
+@keyframes slide_top {
+  
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide_right {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide_left {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fase_in {
+  0% { opacity: 0; }
+  100% { opacity: 1;}
 }
