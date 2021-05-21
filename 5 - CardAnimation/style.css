@@ -31,15 +31,20 @@ body {
 .container {
   position: relative;
   width: 80vw;
-  max-width: 70rem;
+  max-width: 80rem;
+  min-width: 30rem;
   height: 50rem;
   
   padding: 2rem 4rem;
   background-color: var(--color-background-container);
   border-radius: .5rem;
+
+  overflow: hidden
+  
 }
 
 .header {
+  position: relative;
   width: 100%;
   height: 4rem;
 
@@ -64,6 +69,56 @@ body {
   color: rgb(207, 90, 90);
 }
 
+.container .menu.-active {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: var(--color-background-container);
+  z-index: 1000;
+
+  width: 100vw;
+
+  height: 50rem;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 25px;
+  
+
+}
+.container .menu.-active li {
+  display: block;
+  margin-top: 20px;
+}
+
+.container > .hamburgerMenu {
+  display: none;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: url(svg/hamburgerMenu.svg);
+  background-size: 25px;
+  background-repeat: no-repeat;
+  /*background-color: blueviolet;*/
+  background-position: center;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.container > .hamburgerMenu.-close { 
+  
+  background: url(svg/closeMenu.svg);
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .menu li {
   display: inline-block;
   padding: .4rem 1rem;
@@ -72,8 +127,6 @@ body {
   opacity: 0;
   animation: slide_top 0.5s linear forwards;
   animation-delay: calc(0.2s * var(--i));
-
-
 }
 
 
@@ -110,7 +163,7 @@ body {
   animation-delay: 2s;
 }
 
-.info { max-width: 25rem; }
+.info { max-width: 32rem; min-width: 20rem;}
 
 .info h1 { 
   font-size: 4.5rem;
@@ -197,12 +250,47 @@ footer img:hover {
 /* MEDIA */
 
 
-@media (max-width: 650px) {
-  .container {
-    /*background-color: blue;*/
-  }
-  .info { max-width: 22rem; }
+@media (max-width: 900px) {
+
+  .info { max-width: 29rem; }
 }
+
+@media (max-width: 730px) {
+
+  .container .art {
+    width: 18rem;
+    bottom: 13rem;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .container > .hamburgerMenu { display: block; }
+  .container .menu { display: none; }
+  .content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .content .readMore { width: 100%; }
+  .header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .container .art {
+    width: 100px;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1 !important;
+  }
+  .container .info {
+    width: 100%;
+  }
+}
+
 
 
 
