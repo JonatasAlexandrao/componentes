@@ -82,28 +82,28 @@ body {
 
   height: 50rem;
   position: absolute;
-  top: -20px;
+  top: -2rem;
   left: 50%;
   transform: translateX(-50%);
 
-  font-size: 25px;
+  font-size: 2.5rem;
   
 
 }
 .container .menu.-active li {
   display: block;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
 .container > .hamburgerMenu {
   display: none;
-  width: 35px;
-  height: 35px;
+  width: 3.5rem;
+  height: 3.5rem;
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 1.5rem;
+  right: 2rem;
   background: url(svg/hamburgerMenu.svg);
-  background-size: 25px;
+  background-size: 2.5rem;
   background-repeat: no-repeat;
   /*background-color: blueviolet;*/
   background-position: center;
@@ -114,7 +114,7 @@ body {
 .container > .hamburgerMenu.-close { 
   
   background: url(svg/closeMenu.svg);
-  background-size: 25px;
+  background-size: 2.5rem;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -271,7 +271,7 @@ footer img:hover {
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 5rem;
   }
   .content .readMore { width: 100%; }
   .header {
@@ -280,8 +280,8 @@ footer img:hover {
   }
 
   .container .art {
-    width: 100px;
-    top: -40px;
+    width: 10rem;
+    top: -4rem;
     left: 50%;
     transform: translateX(-50%);
     opacity: 1 !important;

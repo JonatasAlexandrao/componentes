@@ -1,0 +1,78 @@
+/*============= Variáveis ==============*/
+html {
+  --color-background-page: rgb(66, 66, 66);
+  --color-background: #fcf0e9 ;
+  --color-black: rgb(17, 9, 9);
+  --color-white: rgb(219, 218, 218) ;
+  --color-font: rgb(79, 51, 46, .8);
+  --color-primari: rgb(255, 179, 132);
+}
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
+h1, h2, h3 { padding: 0; margin: 0; }
+li { list-style: none; padding: 0; }
+ul { padding: 0; }
+
+:root { font-size: 10px; }
+
+/*@media (max-width: 430px) {
+  :root {
+    font-size: 10px;
+  }
+   
+}*/
+
+body {
+  padding-top: 3rem;
+  margin: 0;
+  /*font-family: 'Dancing Script', cursive;
+  font-family: 'Annie Use Your Telescope', cursive;*/
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.4rem;
+
+  background-color: var(--color-background-page);
+  color: var(--color-font);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.menu {
+  width: 90vw;
+  background-color: var(--color-background);
+}
+
+.menu > h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 7rem;
+  color: #c03333;
+  text-align: center;
+}
+
+.menu .subtitle {
+  position: relative;
+  margin: 0;
+  top: -1.2rem;
+
+  color: #288c49;
+  text-align: center;
+  font-size: 2.3rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  
+}
+
+.menu > h2 {
+  font-size: 5rem;
+  font-weight: 400;
+  color: rgb(189, 127, 117);
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--color-primari);
+}
+
