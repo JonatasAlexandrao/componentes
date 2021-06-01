@@ -4,27 +4,19 @@ html {
   --color-background: #fcf0e9 ;
   --color-black: rgb(17, 9, 9);
   --color-white: rgb(219, 218, 218) ;
-  --color-font: rgb(79, 51, 46, .8);
-  --color-primari: rgb(255, 179, 132);
+  --color-font: rgb(79, 51, 46, .7);
+  --color-primari: rgba(255, 179, 132, .9);
 }
 
 html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: border-box; }
-h1, h2, h3 { padding: 0; margin: 0; }
+h1, h2, h3, p { padding: 0; margin: 0; }
 li { list-style: none; padding: 0; }
 ul { padding: 0; }
 
 :root { font-size: 10px; }
 
-/*@media (max-width: 430px) {
-  :root {
-    font-size: 10px;
-  }
-   
-}*/
-
 body {
-  padding-top: 3rem;
   margin: 0;
 
   font-family: 'Source Sans Pro', sans-serif;
@@ -35,18 +27,21 @@ body {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  /*align-items: center;*/
 
 }
 
+
+
 .menu {
   position: relative;
-  width: 90vw;
-  max-width: 80rem;
+  width: 66rem;
+  height: 100%;
+ /* max-width: 74rem;*/
   background-color: var(--color-background);
 
   display: grid;
-  grid-template-columns: 1fr 60% 1fr;
+  grid-template-columns: 1fr 65% 1fr;
   grid-template-areas: 
   ". centro ."
   "footer footer footer"
@@ -55,48 +50,40 @@ body {
 }
 
 .ornament {
-  width: 30rem;
+  width: 40%;
 
   position: absolute;
   top: 0;
   left: 0;
 }
-/*.menu::before {
-  content:'';
-  width: 250px;
-
-  background: url(./img/img-top.svg);
-  background-repeat: no-repeat;*/
-
-  /*position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;*/
-  
-/*}*/
 
 .container {
   grid-area: centro;
+}
 
+.container > h2 {
+  text-align: center;
+}
+
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
-.container .logo {
+.header .logo {
   position: relative;
-  width: 4.5rem;
-  padding: 30px 0;
+  width: 5rem;
+  padding: 3rem 0;
 }
 
-.container > h1 {
+.header > h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 6rem;
   color: #c03333;
 }
 
-.container .subtitle {
+.header .subtitle {
   position: relative;
   margin: 0;
   top: -1.2rem;
@@ -114,7 +101,41 @@ body {
   color: rgb(189, 127, 117);
 }
 
+.product > .productTitle {
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: .2rem;
+  margin-top: 2rem;
+}
+.product > p {
+  margin: .5rem 0 2rem 1.5rem;
+}
+
+table {
+  width: 100%;
+}
+
+
+table tr td {
+  text-align: center;
+  line-height: 1.5;
+}
+
+table th {
+  font-weight: 500;
+}
+
+table th:first-child, table tr > td:first-child {
+  text-align: left;
+}
+
+table th:last-child, table tr > td:last-child {
+  text-align: right;
+}
+
 .footer {
+  position: relative;
   width: 100%;
   height: 8rem;
   background-color: var(--color-primari);
@@ -124,12 +145,37 @@ body {
   justify-content: center;
   align-items: center;
 
+  margin-top: 5rem;
+
+}
+.footer::before {
+  content: '';
+
+  position: absolute;
+  top: 1rem;
+
+  width: 100%;
+  height: .7rem;
+  background-color: var(--color-background);
 }
 
 .socialMedia img {
   width: 3.5rem;
+  cursor: pointer;
+  padding-top: 1.7rem;
 }
 .socialMedia .twitter, .socialMedia .whatsapp {
   width: 3.6rem;
 }
 
+@media (max-width: 460px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    width: 36rem;
+  }
+}
