@@ -1,0 +1,47 @@
+/*============= Variáveis ==============*/
+html {
+  --color-background-page: rgb(66, 66, 66);
+  --color-background: #fcf0e9 ;
+  --color-black: rgb(17, 9, 9);
+  --color-white: rgb(219, 218, 218) ;
+  --color-font: rgb(79, 51, 46, .7);
+  --color-primari: rgba(255, 179, 132, .9);
+}
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
+h1, h2, h3, p { padding: 0; margin: 0; }
+li { list-style: none; padding: 0; }
+ul { padding: 0; }
+
+:root { font-size: 10px; }
+
+body {
+  margin: 0;
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.4rem;
+
+  background-color: var(--color-background-page);
+  color: var(--color-font);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+}
+
+.card {
+  width: 90vw;
+  max-width: 100rem;
+  min-height: 40rem;
+  background-color: var(--color-background);
+
+  padding: 2rem;
+}
+
+.card > .logo {
+  width: 5rem;
+}
