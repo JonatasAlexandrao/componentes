@@ -11,7 +11,7 @@ html {
 html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: border-box; }
 h1, h2, h3, p { padding: 0; margin: 0; }
-li { list-style: none; padding: 0; }
+li { list-style: none; padding: 0; display: inline;}
 ul { padding: 0; }
 
 :root { font-size: 10px; }
@@ -21,6 +21,7 @@ body {
 
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.4rem;
+  font-variant: small-caps;
 
   background-color: var(--color-background-page);
   color: var(--color-font);
@@ -39,9 +40,60 @@ body {
   min-height: 40rem;
   background-color: var(--color-background);
 
-  padding: 2rem;
+  padding: .5rem 4rem;
+
+  display: grid;
+  grid-template-rows: 7rem 1fr 5rem;
 }
 
-.card > .logo {
-  width: 5rem;
+header {
+  width: 100%;
+ /* background-color: blueviolet;*/
+
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+
+  align-items: center;
 }
+
+header > .logo {
+  width: 5.5rem;
+  display: inline-block;
+}
+
+header > .menu {
+  display: inline-block;
+  text-align: right;
+  font-weight: 500;
+  /*background-color: rgb(188, 147, 229);*/
+}
+
+.menu li:not(:last-child) {
+  padding-right: 1.5rem;
+}
+
+main {
+  width: 100%;
+  background-color: cornflowerblue;
+}
+
+main > .container-img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 10rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-img > .img-pao {
+  width: 30rem;
+}
+
+footer {
+  width: 100%;
+  background-color: brown;
+}
+
