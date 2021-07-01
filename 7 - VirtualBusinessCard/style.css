@@ -44,6 +44,9 @@ body {
 
   display: grid;
   grid-template-rows: 7rem 1fr 5rem;
+
+  overflow: hidden;
+  position: relative;
 }
 
 header {
@@ -68,13 +71,62 @@ header > .menu {
   /*background-color: rgb(188, 147, 229);*/
 }
 
-.menu li:not(:last-child) {
-  padding-right: 1.5rem;
+.menu li { cursor: pointer; }
+.menu li:not(:last-child) { padding-right: 1.5rem; }
+
+.dark-ligth-mode { 
+  width: 6rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  background-color: rgb(177, 179, 175);
+}
+
+.dark-ligth-mode .option {
+  width: 3rem;
+  height: 3rem;
+  background-color: lightblue;
+  border-radius: 1.5rem;
 }
 
 main {
   width: 100%;
-  background-color: cornflowerblue;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  justify-items: center;
+  align-items: center;
+}
+
+main > .container-text {
+  /*background-color: aqua;*/
+  justify-self: left;
+}
+
+.container-text > .title {
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+  max-width: 35rem;
+}
+
+.container-text > .title > span { 
+  color: rgb(204, 87, 9); 
+  font-size: 3.5rem;
+  font-weight: 700;
+
+}
+.container-text > p { margin-top: 1.5rem; max-width: 35rem; }
+
+.container-text > .btnLearMore {
+  border-style: none;
+  border-radius: 3rem;
+  padding: .8rem 2rem;
+  margin-top: 1.5rem;
+
+  font-weight: 500;
+
+  background-color: rgb(204, 87, 9);
+  color: var(--color-background);
+  cursor: pointer;
 }
 
 main > .container-img {
@@ -92,8 +144,36 @@ main > .container-img {
   width: 30rem;
 }
 
+
 footer {
   width: 100%;
-  background-color: brown;
+  /*background-color: brown;*/
+}
+
+.container-socialMedia {
+
+  width: 50rem;
+  height: 5rem;
+
+  /*background-color: aquamarine;*/
+
+  display: flex;
+  align-items: center;
+  /*text-align: left;*/
+  
+}
+
+.container-socialMedia a {
+  margin-right: 1rem;
+}
+
+.container-socialMedia img {
+  width: 3rem;
+  opacity: .8;
+}
+
+
+.socialMedia .instagram {
+  /*width: 2.5rem;*/
 }
 
