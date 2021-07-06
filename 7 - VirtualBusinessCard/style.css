@@ -2,10 +2,12 @@
 html {
   --color-background-page: rgb(66, 66, 66);
   --color-background: #fcf0e9 ;
+  --color-background-dark: rgb(109, 44, 0);
   --color-black: rgb(17, 9, 9);
   --color-white: rgb(219, 218, 218) ;
   --color-font: rgb(79, 51, 46, .7);
-  --color-primari: rgba(255, 179, 132, .9);
+  /*--color-primari: rgba(255, 179, 132, .9);*/
+  --color-primari: rgb(228, 96, 8);
 }
 
 html { box-sizing: border-box; }
@@ -24,7 +26,6 @@ body {
   font-variant: small-caps;
 
   background-color: var(--color-background-page);
-  color: var(--color-font);
 
   display: flex;
   justify-content: center;
@@ -38,8 +39,7 @@ body {
   width: 90vw;
   max-width: 100rem;
   min-height: 40rem;
-  background-color: var(--color-background);
-
+  
   padding: .5rem 4rem;
 
   display: grid;
@@ -47,6 +47,14 @@ body {
 
   overflow: hidden;
   position: relative;
+}
+.card.-light {
+  color: var(--color-font);
+  background-color: var(--color-background);
+}
+.card.-dark {
+  color: var(--color-background);
+  background-color: var(--color-background-dark);
 }
 
 header {
@@ -66,26 +74,51 @@ header > .logo {
 
 header > .menu {
   display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: right;
-  font-weight: 500;
-  /*background-color: rgb(188, 147, 229);*/
+  
 }
 
-.menu li { cursor: pointer; }
-.menu li:not(:last-child) { padding-right: 1.5rem; }
+.menu li { cursor: pointer; vertical-align: middle;}
+.menu li:not(:last-child) { margin-right: 1.5rem; }
 
-.dark-ligth-mode { 
-  width: 6rem;
-  height: 3rem;
-  border-radius: 1.5rem;
-  background-color: rgb(177, 179, 175);
-}
-
-.dark-ligth-mode .option {
+.menu .btnMode {
   width: 3rem;
   height: 3rem;
-  background-color: lightblue;
+  background-color: rgb(207, 209, 209);
   border-radius: 1.5rem;
+  display: inline-block;
+  position: relative;
+}
+
+.menu .btnMode::after {
+  content: "";
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  /*display: block;*/
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.menu .dark-mode::after {
+  background-image: url("./svg/moon.svg");
+}
+.menu .light-mode::after {
+  background-image: url("./svg/sun.svg");
+}
+
+
+.menu li:hover:not(:last-child) {
+  color: var(--color-primari);
+  font-weight: 700;
+  border-bottom: var(--color-primari) 2px solid;
 }
 
 main {
@@ -109,7 +142,7 @@ main > .container-text {
 }
 
 .container-text > .title > span { 
-  color: rgb(204, 87, 9); 
+  color: var(--color-primari); 
   font-size: 3.5rem;
   font-weight: 700;
 
@@ -124,7 +157,7 @@ main > .container-text {
 
   font-weight: 500;
 
-  background-color: rgb(204, 87, 9);
+  background-color: var(--color-primari);
   color: var(--color-background);
   cursor: pointer;
 }
@@ -169,7 +202,7 @@ footer {
 
 .container-socialMedia img {
   width: 3rem;
-  opacity: .8;
+  /*opacity: .8;*/
 }
 
 
